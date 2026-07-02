@@ -1,5 +1,5 @@
 const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('#site-navigation');
+const nav = document.querySelector('#header-nav');
 
 function closeMenu() {
   if (!navToggle || !nav) return;
@@ -8,17 +8,48 @@ function closeMenu() {
 }
 
 if (navToggle && nav) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.addEventListener('click', function () {
+    var isOpen = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', String(!isOpen));
     nav.classList.toggle('is-open', !isOpen);
   });
 
-  document.addEventListener('keydown', (event) => {
+  document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') closeMenu();
   });
 
-  nav.addEventListener('click', (event) => {
-    if (event.target instanceof HTMLAnchorElement) closeMenu();
+  nav.addEventListener('click', function (event) {
+    if (event.target.tagName === 'A') closeMenu();
   });
+}
+
+var counterValue = document.querySelector('[data-counter-value]');
+var decBtn = document.querySelector('[data-counter="dec"]');
+var incBtn = document.querySelector('[data-counter="inc"]');
+
+if (counterValue && decBtn && incBtn) {
+  decBtn.addEventListener('click', function () {
+    var val = parseInt(counterValue.textContent, 10);
+    if (val > 1) counterValue.textContent = val - 1;
+  });
+
+  incBtn.addEventListener('click', function () {
+    var val = parseInt(counterValue.textContent, 10);
+    if (val < 99) counterValue.textContent = val + 1;
+  });
+}
+
+var animSection = document.querySelector('[data-animate]');
+if (animSection) {
+  var triggered = false;
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting && !triggered) {
+        triggered = true;
+        entry.target.classList.add('is-visible');
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.1 });
+  observer.observe(animSection);
 }

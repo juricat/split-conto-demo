@@ -4,68 +4,155 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina dimostrativa del kit statico HTML CSS JS.">
+    <meta name="description" content="DividiConto — Ogni conto diviso con eleganza. Inserisci i dettagli del tuo tavolo per procedere alla divisione del conto.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Kit mini sito statico">
-    <meta property="og:description" content="Pagina dimostrativa del kit statico HTML CSS JS.">
+    <meta property="og:title" content="DividiConto — Ogni conto diviso con eleganza">
+    <meta property="og:description" content="Inizia il tuo percorso verso una serata senza pensieri. Divisione del conto rapida e precisa.">
     <link rel="canonical" href="https://example.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap">
     <link rel="stylesheet" href="assets/css/styles.min.css">
-    <title>Home | Kit mini sito statico</title>
+    <title>Home | DividiConto</title>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebPage","name":"Home | Kit mini sito statico"}
+    {"@context":"https://schema.org","@type":"WebPage","name":"Home | DividiConto","description":"Ogni conto diviso con eleganza."}
     </script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Salta al contenuto</a>
-    <header class="site-header" data-site-header>
-        <div class="container header-inner">
-            <a class="brand" href="index.html" aria-label="Vai alla home">Mini Site</a>
-            <button class="nav-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
-                <span class="sr-only">Apri menu</span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </button>
-            <nav class="site-nav" id="site-navigation" aria-label="Navigazione principale">
-                <a aria-current="page" href="index.html">Home</a>
-                <a  href="servizi.html">Servizi</a>
-                <a  href="contatti.html">Contatti</a>
-            </nav>
+
+    <section class="hero-section" aria-label="Benvenuto" data-animate>
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-bg-overlay"></div>
         </div>
-    </header>
-    <main id="main-content">
-        <section class="hero section">
-            <div class="container hero-grid">
+
+        <header class="site-header" data-site-header>
+            <div class="header-inner">
+                <a class="brand" href="index.html" aria-label="DividiConto — Vai alla home">
+                    <span class="brand-icon" aria-hidden="true">D</span>
+                    <span class="brand-name">DividiConto</span>
+                </a>
+                <button class="nav-toggle" type="button" aria-controls="header-nav" aria-expanded="false">
+                    <span class="sr-only">Apri menu</span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+                <div class="header-actions" id="header-nav" aria-label="Navigazione principale">
+                    <a class="header-link" href="contatti.html">Assistenza</a>
+                    <a class="header-cta" href="#form-inizio">Inizia</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <div class="hero-content">
+
                 <div class="hero-copy">
-                    <p class="eyebrow">Starter statico</p>
-                    <h1>Home placeholder</h1>
-                    <p class="lead">Questa pagina è un placeholder tecnico da sostituire con i testi dei template HTML di input.</p>
-                    <div class="actions">
-                        <a class="button button-primary" href="contatti.html">Contatti</a>
-                        <a class="button button-secondary" href="servizi.html">Servizi</a>
+                    <p class="eyebrow anim-fade anim-eyebrow">BENVENUTO</p>
+                    <h1 class="hero-title anim-fade anim-title">Ogni conto<br>diviso con<br>eleganza.</h1>
+                    <p class="hero-subtitle anim-fade anim-subtitle">Inizia il tuo percorso verso una serata senza pensieri.</p>
+                    <div class="hero-social">
+                        <a class="social-btn anim-fade-up anim-social-1" href="#" aria-label="Instagram">
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                        </a>
+                        <a class="social-btn anim-fade-up anim-social-2" href="#" aria-label="Twitter">
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 7.5v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </a>
+                        <a class="social-btn anim-fade-up anim-social-3" href="#" aria-label="Facebook">
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </a>
                     </div>
                 </div>
-                <div class="visual-card" aria-hidden="true">
-                    <span></span>
+
+                <div class="form-card anim-scale-card anim-card" id="form-inizio" role="form" aria-label="Inizio divisione conto">
+                    <div class="form-card-badge anim-fade anim-card-badge">
+                        <span class="form-card-badge-dot" aria-hidden="true"></span>
+                        <span class="form-card-badge-text">Benvenuto</span>
+                    </div>
+
+                    <div class="anim-fade anim-card-heading">
+                        <h2 class="form-card-heading">Inizio</h2>
+                        <p class="form-card-desc">Inserisci i dettagli del tuo tavolo per procedere alla divisione del conto.</p>
+                    </div>
+
+                    <div class="form-group anim-fade anim-card-field1">
+                        <label class="form-label" for="table-number">Numero del Tavolo</label>
+                        <input class="form-input" type="text" id="table-number" placeholder="No. 12" autocomplete="off">
+                        <p class="form-hint">Inserisci il numero indicato al tuo tavolo</p>
+                    </div>
+
+                    <div class="counter-group anim-fade anim-card-field2">
+                        <span class="form-label" id="people-label">Quante Persone Siete?</span>
+                        <div class="counter-row" role="group" aria-labelledby="people-label">
+                            <button class="counter-btn" type="button" aria-label="Diminuisci numero persone" data-counter="dec">
+                                <svg aria-hidden="true" viewBox="0 0 14 14"><line x1="3" y1="7" x2="11" y2="7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            </button>
+                            <output class="counter-display" aria-live="polite" data-counter-value>7</output>
+                            <button class="counter-btn" type="button" aria-label="Aumenta numero persone" data-counter="inc">
+                                <svg aria-hidden="true" viewBox="0 0 14 14"><line x1="3" y1="7" x2="11" y2="7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="3" x2="7" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="anim-scale-x anim-card-btn">
+                        <button class="btn-primary" type="button">
+                            AVANTI
+                            <svg aria-hidden="true" viewBox="0 0 14 14"><path d="M3 7h8M8 4l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </div>
+
+                    <div class="stepper" aria-label="Passo 1 di 3">
+                        <span class="stepper-dot is-active anim-fade anim-stepper-active" aria-hidden="true"></span>
+                        <span class="stepper-dot anim-slide-dot anim-stepper-dot2" aria-hidden="true"></span>
+                        <span class="stepper-dot anim-slide-dot anim-stepper-dot3" aria-hidden="true"></span>
+                    </div>
+
+                    <p class="stepper-label anim-fade anim-stepper-label">Passa al 2 di 3 · Dettagli Tavolo</p>
                 </div>
+
+                <aside class="features-col anim-fade anim-features" aria-label="Funzionalità">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 16 16"><rect x="1" y="4" width="4" height="11" rx="1" fill="#c0614a"/><rect x="6" y="2" width="4" height="13" rx="1" fill="#c0614a" opacity="0.7"/><rect x="11" y="6" width="4" height="9" rx="1" fill="#c0614a" opacity="0.4"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="feature-title">Analisi &amp; Dati</h3>
+                            <p class="feature-desc">Statistiche in tempo reale</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 16 16"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z" fill="#c0614a"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="feature-title">Rapido &amp; Preciso</h3>
+                            <p class="feature-desc">Divisione in pochi secondi</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 16 16"><rect x="1" y="1" width="6" height="6" rx="1" fill="#c0614a"/><rect x="9" y="1" width="6" height="6" rx="1" fill="#c0614a" opacity="0.7"/><rect x="1" y="9" width="6" height="6" rx="1" fill="#c0614a" opacity="0.7"/><rect x="9" y="9" width="6" height="6" rx="1" fill="#c0614a" opacity="0.4"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="feature-title">Tutti i Valori</h3>
+                            <p class="feature-desc">Calcoli, mance e altro</p>
+                        </div>
+                    </div>
+                </aside>
+
             </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <h2>Sezione dimostrativa</h2>
-                <div class="card-grid">
-                    <article class="card"><h3>Card uno</h3><p>Testo placeholder.</p></article>
-                    <article class="card"><h3>Card due</h3><p>Testo placeholder.</p></article>
-                    <article class="card"><h3>Card tre</h3><p>Testo placeholder.</p></article>
-                </div>
+        </main>
+
+        <footer class="site-footer">
+            <p class="footer-copy">&copy; 2026 DividiConto. Tutti i diritti riservati</p>
+            <div class="footer-links">
+                <a class="footer-link" href="#">Privacy</a>
+                <a class="footer-link" href="#">Termini</a>
             </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>© 2026 Mini Site</p>
-        </div>
-    </footer>
+        </footer>
+    </section>
+
     <script src="assets/js/main.min.js" defer></script>
 </body>
 </html>

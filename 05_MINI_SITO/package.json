@@ -1,0 +1,10 @@
+{
+  "name": "mini-sito-html-css-deploy-root",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ./tools/build.mjs",
+    "clean": "node ./tools/clean.mjs"
+  }
+}
